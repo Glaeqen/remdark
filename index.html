@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Remdark - Dariusz Górski</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="w3-glaeqen.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-dark-grey.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="photoSwipe/photoswipe.css">
+    <link rel="stylesheet" href="photoSwipe/default-skin/default-skin.css">
+    <script src="photoSwipe/photoswipe.min.js"></script>
+    <script src="photoSwipe/photoswipe-ui-default.min.js"></script>
+    <style>
+        @font-face {
+            font-family: "LogoFont";
+            src: url(TT_Bricks_Medium_Italic.ttf) format("truetype");
+        }
+
+        h1.logo {
+            font-family: "LogoFont";
+            font-size: 66px;
+        }
+
+        hr {
+            border-width: 3px;
+            color: purple;
+        }
+
+        .mySlides {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-theme-dark w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-small w3-hover-white w3-large w3-theme-dark" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-small w3-white">Remdark</a>
+            <a href="#offer" class="w3-bar-item w3-button w3-hide-small w3-padding-small w3-hover-white">Oferta</a>
+            <a href="#gallery" class="w3-bar-item w3-button w3-hide-small w3-padding-small w3-hover-white">Galeria</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-padding-small w3-hover-white">Kontakt</a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="#offer" class="w3-bar-item w3-button w3-padding-large">Oferta</a>
+            <a href="#gallery" class="w3-bar-item w3-button w3-padding-large">Galeria</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-padding-large">Kontakt</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="w3-container w3-theme-dark" style="padding-top:30px;" id="myHeader">
+        <div class="w3-center">
+            <h1 class="logo"><strong>REMDARK</strong></h1>
+            <h6>Dariusz Górski</h6>
+            <h4>Usługi remontowo-wykończeniowe</h4>
+            <div style="padding:10px"></div>
+        </div>
+    </header>
+
+    <div id="offer" class="w3-container" style="max-width:900px;margin:auto;padding-top:30px;">
+        <div class="w3-center w3-theme-dark">
+            <h2>Oferta</h2>
+        </div>
+        <div class="w3-row">
+            <div class="w3-col glaeqen-col-120 m40" style="padding:3px;">
+                <div class="w3-theme-l1" style="padding:5px">
+                    <div class="w3-container w3-white">
+                        <div class="w3-center">
+                            <h5 class="w3-theme-l1">Flizowanie</h5>
+                            <img src="svg/tiles.svg" style="height:70px">
+                            <hr>
+                        </div>
+                        <div class="w3-left-align">
+                            <ul class="w3-ul">
+                                <li>Płytki ścienne</li>
+                                <li>Płytki podłogowe (gres, poler, mat)</li>
+                                <li>Realizacja łazienek z projektu</li>
+                            </ul>
+                        </div>
+                        <div class="glaeqen-col-120 w3-hide-small" style="height: 138px"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col glaeqen-col-120 m40" style="padding:3px;">
+                <div class="w3-theme-d1" style="padding:5px">
+                    <div class="w3-container w3-white">
+                        <div class="w3-center">
+                            <h5 class="w3-theme-d1">Technologie gipsowe</h5>
+                            <img src="svg/trowel.svg" style="height:70px">
+                            <hr>
+                        </div>
+                        <div class="w3-left-align">
+                            <ul class="w3-ul">
+                                <li>Szpachlowanie i gładzenie</li>
+                                <li>Ściany i sufity w zabudowie kartonowo-gipsowej</li>
+                                <li>Zabudowy nietypowe
+                                    <ul>
+                                        <li>o zarysach prostolinijnych</li>
+                                        <li>o zarysach łukowatych</li>
+                                        <li>wielopoziomowe</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col glaeqen-col-120 m40" style="padding:3px;">
+                <div class="w3-blue-gray" style="padding:5px">
+                    <div class="w3-container w3-white">
+                        <div class="w3-center">
+                            <h5 class="w3-blue-gray">Technologie malarskie</h5>
+                            <img src="svg/paint-roller.svg" style="height:70px">
+                            <hr>
+                        </div>
+                        <div class="w3-left-align">
+                            <ul class="w3-ul">
+                                <li>Malowanie farbami
+                                    <ul>
+                                        <li>emulsyjnymi</li>
+                                        <li>akrylowymi</li>
+                                        <li>lateksowymi itd.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="glaeqen-col-120 w3-hide-small" style="height: 144px"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col glaeqen-col-120 m60" style="padding:3px; ">
+                <div class="w3-brown" style="padding:5px">
+                    <div class="w3-container w3-white">
+                        <div class="w3-center">
+                            <h5 class="w3-brown">Montaż</h5>
+                            <img src="svg/parquet.svg" style="height:70px">
+                            <hr>
+                        </div>
+                        <div class="w3-left-align">
+                            <ul class="w3-ul">
+                                <li>Stolarka okienna i drzwiowa</li>
+                                <li>Okładziny</li>
+                                <li>Montaż
+                                    <ul>
+                                        <li>drzwi wewnętrznych, zewnętrznych</li>
+                                        <li>okien</li>
+                                        <li>paneli podłogowych i ściennych</li>
+                                        <li>deski typu <i>barlinek</i></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-col glaeqen-col-120 m60" style="padding:3px;">
+                <div class="w3-theme-l3" style="padding:5px">
+                    <div class="w3-container w3-white">
+                        <div class="w3-center">
+                            <h5 class="w3-theme-l3">Biały montaż</h5>
+                            <img src="svg/tap.svg" style="height:70px">
+                            <hr>
+                        </div>
+                        <div class="w3-left-align">
+                            <ul class="w3-ul">
+                                <li>Montaż
+                                    <ul>
+                                        <li>wanien</li>
+                                        <li>umywalek</li>
+                                        <li>misek ustępowych, bidetowych</li>
+                                        <li>pisuarów</li>
+                                        <li>baterii, zaworków, syfonów itp.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="glaeqen-col-120 w3-hide-small" style="height: 39px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gallery" class="w3-content w3-container" style="max-width:900px;margin:auto;padding-top:30px;">
+        <div class="w3-center w3-theme-dark">
+            <h2>Galeria</h2>
+        </div>
+        <div class="w3-white w3-content w3-section" style="max-width:846px">
+            <img class="mySlides w3-animate-opacity" src="slideshow/27.jpg" style="width:100%" onclick="openGallery()">
+            <img class="mySlides w3-animate-opacity" src="slideshow/49.jpg" style="width:100%" onclick="openGallery()">
+            <img class="mySlides w3-animate-opacity" src="slideshow/50.jpg" style="width:100%" onclick="openGallery()">
+            <img class="mySlides w3-animate-opacity" src="slideshow/53.jpg" style="width:100%" onclick="openGallery()">
+            <img class="mySlides w3-animate-opacity" src="slideshow/74.jpg" style="width:100%" onclick="openGallery()">
+        </div>
+    </div>
+
+    <div id="contact" class="w3-container" style="max-width:900px;margin:auto;padding-top:30px;">
+        <div class="w3-center w3-theme-dark">
+            <h2>Kontakt</h2>
+        </div>
+        <div class="w3-row-padding">
+            <div class="w3-col glaeqen-col-120 m60">
+                <h1 class="logo"><strong>REMDARK</strong></h1>
+            </div>
+            <div class="w3-col glaeqen-col-120 m60">
+                <h2>Dariusz Górski</h3>
+                    <h4>
+                        <i class="fa fa-phone-square w3-text-theme" style="font-size:30px"></i>
+                        <strong>506 991 665</strong>
+                    </h4>
+                    <h4>
+                        <i class="fa fa-envelope w3-text-theme" style="font-size:30px"></i>
+                        <strong>xytras183@gmail.com</strong>
+                    </h4>
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+    <!-- Footer -->
+    <footer class="w3-container w3-theme-dark w3-padding-16">
+        <h3>Copyright © Dariusz Górski 2017</h3>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a> and <a href="http://photoswipe.com/">PowerSwipe</a></p>
+        <div>Icons made by i.a. <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+        <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+            <span class="w3-text w3-theme-light w3-padding">Wróć na górę</span>
+            <a class="w3-text-white" href="#myHeader"><span class="w3-xlarge">
+                                <i class="fa fa-chevron-circle-up"></i></span></a>
+        </div>
+    </footer>
+
+    <!-- PhotoSwipe Modal -->
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+
+            <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+
+                <div class="pswp__top-bar">
+
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+
+                    <div class="pswp__counter"></div>
+
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                    <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
+    <script src="galleryIndex.js"></script>
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 4000); // Change image every 2 seconds
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        function openGallery(num) {
+            num = (num === undefined) ? 0 : num;
+            var pswpElement = document.querySelectorAll('.pswp')[0];
+
+            // define options (if needed)
+            var options = {
+                // optionName: 'option value'
+                // for example:
+                index: num // start at first slide
+            };
+
+            // Initializes and opens PhotoSwipe
+            var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, galleryItems, options);
+            gallery.init();
+        }
+    </script>
+</body>
+
+</html>
