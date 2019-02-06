@@ -11,8 +11,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="photoSwipe/photoswipe.css">
     <link rel="stylesheet" href="photoSwipe/default-skin/default-skin.css">
-    <script src="photoSwipe/photoswipe.min.js"></script>
-    <script src="photoSwipe/photoswipe-ui-default.min.js"></script>
+    <script class="glq" src="photoSwipe/photoswipe.min.js"></script>
+    <script class="glq" src="photoSwipe/photoswipe-ui-default.min.js"></script>
+    <script class="glq" type="text/javascript">
+     /* function burn() { */
+     /* document.querySelectorAll("[id^=prv], [id^=right], [id^=rodo]").forEach(function(el) { el.remove() }) */
+     /* } */
+     var lst = [];
+     var mo = new MutationObserver(function(mutationRecordList) {
+         mutationRecordList.forEach(function(mutationRecord) {
+             mutationRecord.addedNodes.forEach(function(node) {
+                 if(typeof node == "HTMLScriptNode" && node.className != "glq"){
+                     debugger;
+                 }
+                 var typ = typeof node;
+                 var className = node.className;
+                 debugger;
+             });
+         });
+     });
+     mo.observe(document.documentElement, {
+         childList: true,
+         subtree: true
+     })
+    </script>
     <style>
         @font-face {
             font-family: "LogoFont";
@@ -35,6 +57,7 @@
     </style>
 </head>
 
+<!-- <body onload="burn()"> -->
 <body>
 
     <!-- Navbar -->
@@ -300,8 +323,8 @@
         </div>
     </div>
     <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
-    <script src="galleryIndex.js"></script>
-    <script>
+    <script class="glq" src="galleryIndex.js"></script>
+    <script class="glq">
         var myIndex = 0;
         carousel();
 
