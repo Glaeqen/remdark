@@ -13,5 +13,5 @@ for i, element in enumerate(lista):
     width, height = get_image_size(element)
     print("{src: 'slideshow/" + element + "', w: " + str(width) + ", h: " + str(height) + "}", end="")
     if i == len(lista) - 1: continue
-    print(", ")
+    print(",")
 print("]")

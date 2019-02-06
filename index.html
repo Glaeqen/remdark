@@ -14,19 +14,15 @@
     <script class="glq" src="photoSwipe/photoswipe.min.js"></script>
     <script class="glq" src="photoSwipe/photoswipe-ui-default.min.js"></script>
     <script class="glq" type="text/javascript">
-     /* function burn() { */
-     /* document.querySelectorAll("[id^=prv], [id^=right], [id^=rodo]").forEach(function(el) { el.remove() }) */
-     /* } */
-     var lst = [];
      var mo = new MutationObserver(function(mutationRecordList) {
          mutationRecordList.forEach(function(mutationRecord) {
              mutationRecord.addedNodes.forEach(function(node) {
-                 if(typeof node == "HTMLScriptNode" && node.className != "glq"){
-                     debugger;
+                 if(node instanceof HTMLScriptElement && node.className != "glq"){
+                     node.remove();
                  }
-                 var typ = typeof node;
-                 var className = node.className;
-                 debugger;
+                 if(node.id && node.id.includes('prv')){
+                     node.remove();
+                 }
              });
          });
      });
@@ -57,7 +53,6 @@
     </style>
 </head>
 
-<!-- <body onload="burn()"> -->
 <body>
 
     <!-- Navbar -->
